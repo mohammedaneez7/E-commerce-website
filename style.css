@@ -414,6 +414,7 @@ margin-bottom: 5px;
 .footer-box{
     display: flex;
     flex-direction: column;
+    margin-left: 140px;
 }
 .footer-box h3{
     font-size: 20px;
@@ -598,5 +599,6 @@ margin-bottom: 5px;
     }
     .footer-box{
         padding: 8px 5% 5px;
+        margin-left: 0px;
     }
 }
