@@ -103,7 +103,7 @@ header{
     }
       
     .Navbar-right {
-        display: flex;
+        display: none;
         margin-left: 0;
     }
     .Navbar__ToggleShow {
@@ -589,5 +589,14 @@ margin-bottom: 5px;
     }
     .nav-right a{
         margin-right: 7px;
+    }
+    .newsletter-content form input:first-child{
+        padding: 4px;
+    }
+    .newsletter-content form input:last-child{
+        font-size: 6px;
+    }
+    .footer-box{
+        padding: 8px 5% 5px;
     }
 }
