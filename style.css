@@ -11,7 +11,7 @@
 :root{
 --bg-color: #f2f0f1;
 --text-color: #000000;
---main-color: #fff1f0;
+--main-color: #f0eeed;
 --other-color: #ffc633;
 --second-color:#6704c4;
 
@@ -25,25 +25,21 @@ body{
     color: var(--text-color);
 }
 /* --------------------------header--------------------------  */
-header{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    z-index: 1000;
-}
-.main-navbar{
-    border-bottom: 1px solid var(--bg-color);
-}
+
 .main-navbar .top-navbar{
     background-color: var(--text-color);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 50px 10px 50px;
+}
+.main-navbar .top-navbar .btn i{
+    color: var(--second-color);
 }
 .main-navbar .top-navbar .brand-name{
+    margin-top: 10px;
     font-size: 33px;
+    text-decoration: none;
     font-weight: 800;
     color: var(--bg-color);
+    line-height: 2.7rem;
 }
 .main-navbar .top-navbar .nav-link{
     color: var(--bg-color);
@@ -75,10 +71,19 @@ header{
     padding: 0px;
     background-color: var(--bg-color);
 }
+.main-navbar .navbar .navbar-brand{
+    margin-top: 10px;
+    font-size: 33px;
+    text-decoration: none;
+    font-weight: 800;
+    color: var(--text-color);
+    line-height: 2.7rem;
+}
 .main-navbar .navbar .nav-item .nav-link{
-    padding: 8px 20px;
+    padding: 10px 10px 6px 50px;
     font-size: 1rem;
     font-weight: 500;
+    white-space: nowrap;
     color: var(--text-color);
     transition: all .5s;
 }
@@ -87,8 +92,16 @@ header{
     color: var(--second-color);
 }
 
+/* ------------------responsive header------------------ */
 
 @media only screen and (max-width: 600px) {
+
+    .main-navbar .top-navbar .brand-name{
+        margin-top: 10px;
+        font-size: 33px;
+        font-weight: 800;
+        color: var(--bg-color);
+    }
     .main-navbar .top-navbar .nav-link{
         font-size: 12px;
         padding: 8px 10px;
@@ -101,11 +114,7 @@ header{
         color: var(--second-color);
     }
 
-    .main-navbar .top-navbar .brand-name{
-        font-size: 33px;
-        font-weight: 800;
-        color: var(--bg-color);
-    }
+    
 }
 /*header{
     position: fixed;
@@ -244,9 +253,10 @@ section{
     line-height: 33px;
     margin-bottom: 35px;
 }
-.btn{
+.btnn{
     display: inline-block;
     padding: 14px 42px;
+    text-decoration: none;
     background: var(--text-color);
     color: var(--bg-color);
     font-size: 15px;
@@ -254,13 +264,13 @@ section{
     border: 2px solid transparent;
     transition: all .5s;
 }
-.btn:hover{
+.btnn:hover{
     transform: scale(0.9)translateY(-6px);
     border: 2px solid var(--text-color);
-    background: transparent;
-    color: var(--text-color);
+    background: var(--second-color);
+    color: var(--bg-color);
 }
-.btn i{
+.btnn i{
     margin-left: 9px;
 }
 /* -------------------------brands--------------------------- */
@@ -316,6 +326,7 @@ section{
 .stars a{
     font-size: 16px;
     color: var(--other-color);
+    text-decoration: none;
     margin-right: 5px;
 }
 .row-in{
@@ -328,6 +339,7 @@ section{
     font-size: var(--p-font);
     font-weight: 500;
     color: var(--second-color);
+    text-decoration: none;
     transition: all .5s;
 }
 .row-left a:hover{
@@ -344,6 +356,9 @@ section{
 .n-btn{
     text-align: center;
     margin-top: 4rem;
+}
+.n-btn a{
+    text-decoration: none;
 }
 .btn2{
     display: inline-block;
@@ -450,7 +465,51 @@ margin-bottom: 5px;
     transform: rotate3d(0, 0, 1, 360deg)scale(1.03);
 }
 /* -------------------------newsletter section------------------------- */
-.newsletter-content{
+.card{
+    width: 60%;
+    border:none;
+    box-shadow:3px 3px 5px 9px var(--bg-color);
+}
+
+.form-control{
+    height:50px;
+    border:2px solid var(--bg-color);
+    
+}
+.mb-0{
+    align-self: center;
+}
+.d-flex{
+    align-self: center;
+}
+.text-left{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.form-control:focus{
+    box-shadow:none;
+    border:2px solid var(--second-color);
+    
+}
+
+.btnnn{
+    color: var(--bg-color);
+    background: var(--second-color);
+    height:50px;
+    font-size:15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+}
+@media only screen and (max-width:600px){
+    .card{
+        width:400px;
+        border:none;
+        box-shadow:3px 3px 5px 9px var(--bg-color);
+    }
+}
+/*.newsletter-content{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -486,9 +545,55 @@ margin-bottom: 5px;
     border-radius: 5px;
     font-size: var(--p-font);
     cursor: pointer;
-}
+}*/
 /* ---------------------footer------------------------- */
-#footer{
+.footer{
+    background: var(--main-color);
+    color:var(--text-color);
+    
+    .links{
+      ul {list-style-type: none;}
+      li a{
+        color: var(--text-color);
+        line-height: 30px;
+        text-decoration: none;
+        transition: color .2s;
+        &:hover{
+          text-decoration:none;
+          color:var(--second-color);
+          }
+      }
+    }  
+    .about-company{
+      i{
+        font-size: 25px;
+        padding: 0px 5px 0px 5px;
+        }
+      slogan{
+        color:var(--text-color);
+        }
+      a{
+        color: var(--text-color);
+        margin-bottom: 0.8rem;
+        transform: transform .5s;
+        }
+        a:hover{transform: translateX(-5px);
+            color: var(--second-color);
+        }
+      h5{
+        font-size: 33px;
+        font-weight: 800;
+        color: var(--text-color);
+        }
+    } 
+    .location{
+      i{
+        color: var(--second-color);
+        font-size: 18px;
+        }
+    }
+}
+/*#footer{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20px, auto));
     gap: 2rem;
@@ -533,7 +638,7 @@ margin-bottom: 5px;
 .social a:hover{
     transform: rotate3d(0, 0, 1, 360deg)scale(1.06);
     color: var(--bg-color);
-}
+}*/
 /* ------------------------copyright---------------------- */
 .copyright{
     display: flex;
@@ -558,9 +663,7 @@ margin-bottom: 5px;
 /* ----------------------------------------------responsive-------------------------------------------------- */
 
 @media(max-width: 1610px){
-    header{
-        padding: 15px 7%;
-    }
+    
     section{
         padding: 70px 7% 80px;
     }
@@ -682,5 +785,65 @@ margin-bottom: 5px;
     .footer-box{
         padding: 8px 5% 5px;
         margin-left: 0px;
+    }
+}
+/* -----------responsive home------------------ */
+@media only screen and (max-width:600px){
+    .home{
+        padding: 20px 10px 20px 10px;
+        position: relative;
+        height: 70vh;
+        width: 100%;
+        background: url(images/bg_mobile.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .home-text{
+        padding-top: 20px;
+    }
+    .home-text h1{
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 20px;
+    }
+    .home-text h6{
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--second-color);
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    .home-text p{
+        width: 100%;
+        max-width: 560px;
+        font-size: 15px;
+        font-weight: 400;
+        color: var(--second-color);
+        line-height: 33px;
+        margin-bottom: 35px;
+    }
+    .btnn{
+        display: inline-block;
+        padding: 14px 42px;
+        background: var(--text-color);
+        color: var(--bg-color);
+        font-size: 15px;
+        font-weight: 500;
+        border: 2px solid transparent;
+        transition: all .5s;
+    }
+    .btnn:hover{
+        transform: scale(0.9)translateY(-6px);
+        border: 2px solid var(--text-color);
+        background: var(--second-color);
+        color: var(--bg-color);
+    }
+    .btnn i{
+        margin-left: 9px;
     }
 }
